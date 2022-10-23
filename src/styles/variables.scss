@@ -1,0 +1,20 @@
+@mixin text-body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.2rem;
+	color: text-default;
+}
+
+// Variables
+// Color
+$text-default: rgb(10, 30, 4);
+
+$tile-white: #fdfdfd;
+$tunnel-black: #0b141e;
+$floor-gray: #e0e1dd;
+
+$pantone-286: #0039a6; // ACE Trains
+$pantone-376: #6cbe45; // G Train
+
+// Sizing
+$arrow-body-size: 4.25rem;
+$arrow-head-size: 7rem;
