@@ -54,8 +54,10 @@
 		flex-direction: row;
 		gap: 1rem;
 		padding: 0rem 0.5rem;
+		width: 17rem;
 		height: $arrow-body-size;
 		align-items: center;
+		justify-content: center;
 
 		background-color: $tunnel-black;
 		color: $floor-gray;
