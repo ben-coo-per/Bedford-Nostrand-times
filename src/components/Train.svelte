@@ -1,8 +1,9 @@
 <script lang="ts">
 	import TrainCar from "../svgs/TrainCar.svelte";
+	import GTrainSign from "./GTrainSign.svelte";
 	export let direction: "left" | "right";
 	export let distance: number;
-
+	export let tripHeadsign: string;
 	$: percentage_distance = (distance / 30) * 100;
 </script>
 
@@ -11,7 +12,7 @@
 	style={direction + ":" + percentage_distance + "%;"}
 >
 	<div class={"train--first_container train--first_container--" + direction}>
-		<div class="train--label">Hello</div>
+		<div class="train--label"><GTrainSign /> {tripHeadsign}</div>
 		<TrainCar />
 	</div>
 	<TrainCar />
@@ -51,9 +52,13 @@
 
 	.train--label {
 		border: 1px solid #908f8b;
-		border-radius: 2px;
+		border-radius: 0.25rem;
 		background-color: #30394a;
 		color: $tile-white;
 		padding: 0.25rem;
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin: 0 0.5rem;
 	}
 </style>

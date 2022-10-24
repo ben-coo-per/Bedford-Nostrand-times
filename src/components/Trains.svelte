@@ -27,7 +27,11 @@
 		{#if time.direction === "right"}
 			<div class="train-container">
 				<div class="train-container__arrow-continuation">
-					<Train direction="right" distance={time.distance} />
+					<Train
+						direction="right"
+						distance={time.distance}
+						tripHeadsign={time.tripHeadsign}
+					/>
 				</div>
 			</div>
 		{/if}
@@ -35,7 +39,11 @@
 		{#if time.direction === "left"}
 			<div class="train-container">
 				<div class="train-container__arrow-continuation">
-					<Train direction="left" distance={time.distance} />
+					<Train
+						direction="left"
+						distance={time.distance}
+						tripHeadsign={time.tripHeadsign}
+					/>
 				</div>
 			</div>
 		{/if}
