@@ -1,6 +1,6 @@
 <script lang="ts">
+	import GTrainSign from "../svgs/GTrainSign.svelte";
 	import TrainCar from "../svgs/TrainCar.svelte";
-	import GTrainSign from "./GTrainSign.svelte";
 	export let direction: "left" | "right";
 	export let distance: number;
 	export let tripHeadsign: string;
