@@ -1,45 +1,20 @@
 <script lang="ts">
-	import { onMount } from "svelte";
 	import StationSign from "./components/StationSign.svelte";
 	import Trains from "./components/Trains.svelte";
-	import type { DirectionGroup } from "./types/trainDataTypes";
-	let promise;
-
-	async function fetchMTAData() {
-		const res = await fetch(
-			"https://otp-mta-prod.camsys-apps.com/otp/routers/default/nearby?stops=MTASBWY%3AA44&apikey=Z276E3rCeTzOQEoBPPN4JCEc6GfvdnYE"
-		);
-		const data = JSON.parse(await res.text());
-
-		if (res.ok) {
-			cachedGroups = data[0].groups;
-			return data[0].groups;
-		} else {
-			throw new Error(data);
-		}
-	}
-
-	let cachedGroups: DirectionGroup[] = [];
-
-	onMount(async () => {
-		promise = fetchMTAData();
-		setInterval(function () {
-			promise = fetchMTAData();
-		}, 5000);
-	});
 </script>
 
 <StationSign />
 <main>
 	<div>
-		{#await promise}
+		<Trains />
+		<!-- {#await promise}
 			{#if cachedGroups}
 				<Trains groups={cachedGroups} />
 			{/if}
 			<p>loading...</p>
 		{:then groups}
 			<Trains {groups} />
-		{/await}
+		{/await} -->
 	</div>
 </main>
 
