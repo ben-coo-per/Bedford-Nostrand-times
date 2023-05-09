@@ -1,16 +1,7 @@
-# svelte app
+# svelte app that show the train times at my local station in a fun way
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
+I grabbed all of the needed params for the request by looking at the network tab in chrome while on the official MTA times website 
+---
 
 ## Get started
 
