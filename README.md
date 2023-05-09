@@ -1,4 +1,4 @@
-# 🚇 svelte app that show the train times at my local station in a fun way
+# 🚇 svelte app that show the train times at my local station with a fun animation
 
 I grabbed all of the needed params for the request by looking at the network tab in chrome while on the official MTA times website 
 ---
